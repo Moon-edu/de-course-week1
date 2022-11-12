@@ -1,0 +1,21 @@
+name: Automated assignment check
+run-name: Your submission is being scored
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - "*:homework/**"
+jobs:
+  homework-checker-infra:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Greeting
+        run: echo "안녕하세요!"
+
+      - name: Intro
+        run: echo "데이터 엔지니어링 코스에 오신 것을 환영합니다. 과제를 성공적으로 제출하셨습니다."
+
+      - name: Finale
+        run: echo "다음 강의에서 뵙겠습니다. 감사합니다!"
